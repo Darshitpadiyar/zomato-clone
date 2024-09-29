@@ -1,0 +1,433 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+.heading {
+  height: 65vh;
+  width: 100%;
+  background-image: url("https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png");
+  /* background-attachment: fixed; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+}
+.navbar {
+  height: 8vh;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.links {
+  width: 40vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 100;
+  font-size: 1.2rem;
+}
+#heading {
+  color: white;
+  font-weight: 200;
+  font-size: 15px;
+}
+.para {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.6rem;
+  color: white;
+}
+.hero-ssection {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+.input {
+  background-color: #fff;
+  width: 65vw;
+  height: 6vh;
+  border-radius: 10px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+.select {
+  display: flex;
+  align-items: center;
+  margin: 0 20px;
+}
+#address {
+  border: none;
+  border-right: 2px solid rgb(77, 77, 77);
+  color: rgb(77, 77, 77);
+  font-size: 1rem;
+  width: 15vw;
+}
+#address option {
+  color: rgb(77, 77, 77);
+}
+button {
+  border: none;
+  background-color: #fff;
+}
+#search {
+  border: none;
+  width: 30vw;
+  font-size: 1rem;
+}
+.card-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  min-height: 40vh;
+}
+.card-content h3,
+p {
+  padding-left: 15px;
+}
+.card-content h3 {
+  padding-top: 10px;
+}
+.card {
+  width: 350px;
+  height: 200px;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  object-fit: contain;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 20px;
+  margin-bottom: 0;
+  transition: 0.5s;
+}
+.card img {
+  width: 100%;
+  height: 70%;
+}
+.card:hover {
+  height: 220px;
+  width: 370px;
+}
+.container02 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.content {
+  width: 90%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2vh;
+}
+#Collections {
+  color: rgb(255, 50, 18);
+}
+.content div h2 {
+  font-size: 2rem;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+.content div p {
+  font-size: 1.2rem;
+  font-weight: 100;
+  color: rgb(98, 98, 98);
+}
+.cards-box {
+  width: 82%;
+  height: 50vh;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.cards02 {
+  width: 24%;
+  height: 300px;
+  /* background: linear-gradient(90deg,black,white,black); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: end;
+}
+.c01 {
+  background-image: url("https://d31eqxppr3nlos.cloudfront.net/wp-content/uploads/2014/04/shutterstock_41036131.jpg");
+}
+.c02 {
+  background-image: url("http://media.architecturaldigest.com/photos/568452eeb313ecbd18114f23/master/pass/most-romantic-restaurants-011.jpg");
+}
+.c03 {
+  background-image: url("https://i.pinimg.com/originals/1e/f8/59/1ef85920394559a5511fc8fe6fdda51b.jpg");
+}
+.c04 {
+  background-image: url("https://tse2.mm.bing.net/th?id=OIP.p5aGI4FOfI_LxeAoZ1db7wHaJQ&pid=Api&P=0&h=180");
+}
+.cards02 h3,
+h4 {
+  color: white;
+  padding-left: 10px;
+  padding-bottom: 5px;
+  font-weight: 200;
+}
+.cards02 h4 {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.popular {
+  display: flex;
+  width: 82%;
+  height: 15vh;
+  justify-content: start;
+  align-items: end;
+}
+.popular p {
+  font-size: 2.2rem;
+  font-weight: 300;
+  color: rgb(76, 76, 76);
+}
+.buttons {
+  margin: 1vh auto;
+  width: 82%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-bottom: 80px;
+}
+.btn {
+  width: 30%;
+  height: 80px;
+  background-color: #fff;
+  /* border: 1px solid rgba(92, 92, 92, 0.667); */
+  border-radius: 10px;
+  display: flex;
+  box-shadow: 5px 3px 8px rgba(0, 0, 0, 0.2);
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  margin-top: 30px;
+}
+.btn:hover {
+  box-shadow: 5px 3px 15px 8px rgba(0, 0, 0, 0.2);
+}
+.btn div h5 {
+  line-height: 2px;
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+.mobile {
+  width: 100%;
+  height: 65vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fffbf7;
+}
+.mb-box {
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.mb-img {
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.detail {
+  width: 60%;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+}
+.detail h2 {
+  font-size: 2.5rem;
+  font-weight: normal;
+  line-height: 2;
+  /* letter-spacing: 5px; */
+}
+#send {
+  font-size: 0.95rem;
+  font-weight: 100;
+  color: rgb(124, 124, 124);
+  margin-bottom: 10px;
+  padding: 0;
+}
+#Email {
+  margin-right: 30px;
+}
+.radio {
+  margin: 20px 0;
+}
+.share-app {
+  width: 100%;
+  height: 8vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: aqua; */
+}
+.email-input {
+  height: 90%;
+  width: 65%;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  padding-left: 10px;
+  border: 1px solid rgb(84, 84, 84);
+}
+.share-btn {
+  height: 90%;
+  width: 35%;
+  background-color: rgb(239, 79, 95);
+  color: rgb(255, 242, 242);
+  border-radius: 8px;
+  padding: auto;
+  font-size: 1rem;
+  font-weight: 100;
+  margin-left: 10px;
+}
+.downlod {
+  margin: 20px 0;
+  font-weight: normal;
+  color: rgb(84, 84, 84);
+}
+.download-btn {
+  width: 62%;
+  display: flex;
+  justify-content: space-between;
+}
+.explore {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+}
+.explore h3 {
+  margin: 30px 0 15px 0;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: rgb(39, 39, 39);
+}
+.ex-box {
+  width: 100%;
+  height: 60px;
+  border: 1px solid rgb(222, 222, 222);
+  border-radius: 8px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  color: rgb(119, 119, 119);
+  font-weight: 100;
+  padding: 0 20px;
+  /* box-shadow: 2px 3px 3px 3px rgba(59, 59, 59, 0.157); */
+}
+ 
+.footer{
+  width: 100%;
+  background: #f8f8f8;
+
+
+
+}  
+.footer .contnr{
+  width: 90%;
+  margin: 0 auto;
+  padding: 50px 20px;
+
+}   
+.footer-top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+
+}
+.footer-top img{
+  width: 140px;
+
+}
+.footer-top .footer-btn button{
+  padding: 10px 30px;
+  border:0;
+  outline: none;
+  border:1px solid #b1b0b0;
+  font-size: 16px;
+  margin: 0 6px;
+  border-radius: 8px;
+
+
+
+}
+.footer-link{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  
+}
+.footer-link .clm{
+  margin: 50px 12px;
+}
+.footer-link .clm .col-link{
+list-style: none;
+margin-top:16px ;
+}
+.footer-link .clm .col-link li{
+         margin: 10px 0;
+
+}
+.footer-link .clm .col-link li a{
+text-decoration: none;
+color: #919090;
+font-size: 15px;
+
+}
+.footer-link .clm div{
+text-transform: uppercase;
+letter-spacing: 1px;
+font-size: 16px;
+
+
+}
+.col-link a i{
+padding: 6px;
+color: white;
+background: rgb(51,53,51);
+border-radius: 50%;
+margin-bottom: 20px;
+font-size: 15px;
+
+}
+.col-link li img{
+width: 130px;
+
+}
+.footer-bottom{
+font-size: 14px;
+margin-top: 20px;
+text-align: left;
+color: #6b6a6a;
+
+}

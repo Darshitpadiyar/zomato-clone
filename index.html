@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zomato-clone</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="https://tse3.mm.bing.net/th?id=OIP.SEH9Juh4vrgD8nlZYJh9zgHaHa&pid=Api&P=0&h=180"/>
+    <link rel="icon" href="https://static.vecteezy.com/system/resources/previews/020/975/665/original/zomato-logo-zomato-icon-transparent-free-png.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+
+  <body>
+    <div class="heading">
+      <div class="navbar">
+        <div class="logo">
+          <h3 id="heading">Get the App</h3>
+        </div>
+        <div class="links">
+          <a href="">Investor Relations</a>
+          <a href="">Add restrounts</a>
+          <a href="">Log in </a>
+          <a href="">Sign Up</a>
+        </div>
+      </div>
+      <div class="hero-ssection">
+        <img
+          src="https://b.zmtcdn.com/web_assets/8313a97515fcb0447d2d77c276532a511583262271.png"
+          alt=""
+          width="300px"
+        />
+        <div class="para">
+          <p id="para">Discover the best food &amp; drinks in Ratlam</p>
+        </div>
+
+        <div class="input">
+          <div class="select">
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAgpJREFUSEu1lD9o1GAYxp838eCa73RRh1IQ/6CCFC5H2iqKXQUHFycRBS8aBweh4OTuJNSh02GuomDB2x0ctVZaud5HKboICgo6VIfWS1H75ZWcXqlnki8X6Dcmz/f8nvd984awzYe22R9awLrn7FNq4wJAZwkoR4EIaIWMp4YRzlj3lz6lhUwEfL14fFex+OMRgHMpBsygJ8I0qlRrBnG6WAB7jhUoNQ9gOGML5y3TPE215q9efSwgcMsPGXQpo3lHxsBkyZcTWsDalcoxw+DlP63+9whfdp61XZtj4D9hmvtFrfl567v/TNpVewqEG3HpNYCojNuiLu+kA1z7HYBDeQAMelHyW+PpgKt2AMZAV9RNnTSPnnZ9E77cratgBcCmqE/AivDlXt0MFkAYzdMiMOZEXZ7SAXIPmYC7li9vpQOu2aMIsZCnAhPG4aK/GH0kmyd20dquvQig0s+iAXgmfHlGu2idRapWRkAcVaH9Gf415DCk4Z3TrTeZAJHou2vfI+BmpioYNVGX1+O0iQnZcwqBUrMAxjSQJWt14AQ1Xq33BYjEq56zZ4dSswwcTYC8Z1U4WXrw+ktSCG2P254zCKVeAjjQY/KBwo1xa3r5Y1qFWkB0ObhcHuICPQdwsGPGmOOwcD4teReaCdBtl6nUY2Z+K9aOTFCjobJ8AJkBWcz6HnJe0633fgPItL4ZD4fnbgAAAABJRU5ErkJggg=="
+            />
+            <select name="address" id="address">
+              <option value="indore" selected>indore</option>
+              <option value="indore">ratlam</option>
+              <option value="indore">pune</option>
+              <option value="indore">ujjain</option>
+              <option value="indore">bhopal</option>
+              <option value="indore">jhabua</option>
+            </select>
+          </div>
+          <button>
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAp9JREFUSEu1lc9r1FAQx78vu11oN3lJVlq1B1GR6qG2oiAebEELFhW8qgU9tAgK6qGCB/8AxYtSqmgPCioi+AeIp4KKll5sEUSxIEhloVpjMsmuru6+MQ+q2B+7WWg717z3/cybme9EYJVDrLI+qgJc192glDoO4BAzd+pEmHkCwJOGhoZHnud9rie5RYBcLifL5fIDAEdqCDCAx6Zp9ufz+WIt0DxAa2trU6FQGGfmdgAlACNCiKEgCD5qEdu2NzPzIIBTADIAxomoC8DvapB5ACnlfQAnAEwrpXqjKHq31EXXdTsqlcrTOIH1AK4R0YVEQDab3Z5Kpd4AKBuGsdv3fV3vqmGaZrdhGM8A/CqXy5uKxWJ+qcP/XiClHAZwFsANIjpXTwOllA8B9AkhLgVBcCUJMAVgi1KqPYqit/UAHMfZp5QaBfCCiLqTAAUATUSUAqDqAUgpcwC+AfCIaE0SgABYjY2N5szMjIYlRnNzs1kqlUIAX4mopSbAsqxJIUSnEGJXEASvE9Xj8ZFS7gEwxsyjYRj21ATYtn2VmS8CuE1EZ+oE3ANwEsAwEZ1PekGbEOI9gEo9Y2pZVpcQ4rkWrfXqeUazbfsOM/cD+MTMB8Iw/LBUVo7j7FBKaaOtZeaRMAxPJxpNH1iwKn7GArfS6fR1z/Om9XfLstoADAohBgCk50THMplM7+zsrG72oli07FzXtSuVijbQ4Rp98Jn5clzSYwB2ApgwDGO/7/v+wjtV17XjOBuZuY+ZDwLoAPAj3rB6ul4JIW4GQfBd+0BPkJ4+AJOx4XriZnv/Q5b9w5kz20sA2wBMKaX2RlH05S9k2QAtZJpmS1wiPVFbmXkgDMO7KwrQYtlsdl0qlTpKREMrWqIkQ65IiWpBVh3wB2ChCigv7mQvAAAAAElFTkSuQmCC"
+            />
+          </button>
+          <input
+            type="text"
+            id="search"
+            placeholder="Search for restrounts, cuisine or a dish"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="card-container">
+      <div class="card">
+        <img
+          src="https://b.zmtcdn.com/webFrontend/e5b8785c257af2a7f354f1addaf37e4e1647364814.jpeg?output-format=webp&fit=around|402:360&crop=402:360;*,*"
+          alt=""
+        />
+        <div class="card-content">
+          <h3>Order Online</h3>
+          <p>Stay home and order to your doorstep</p>
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="https://b.zmtcdn.com/webFrontend/d026b357feb0d63c997549f6398da8cc1647364915.jpeg?output-format=webp&fit=around|402:360&crop=402:360;*,*"
+          alt=""
+        />
+        <div class="card-content">
+          <h3>Dining</h3>
+          <p>View the city's favourite dining venues</p>
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="https://b.zmtcdn.com/data/o2_assets/371de657644f1b5818fcb5d83387c8c91722851940.png?output-format=webp&fit=around|402:360&crop=402:360;*,*"
+          alt=""
+        />
+        <div class="card-content">
+          <h3>Live Events</h3>
+          <p>Discover India's best events & concerts</p>
+        </div>
+      </div>
+    </div>
+    <div class="container02">
+      <div class="content">
+        <div>
+          <h2>Collections</h2>
+          <p>
+            Explore curated lists of top restaurants, cafes, pubs, and bars in
+            Indore, based on trends
+          </p>
+        </div>
+        <div>
+          <span id="Collections">All Collections in indore</span>
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAQVJREFUSEvdl9ENgkAMhtsAD8AIQIKbwCawiU6iTiKj3MMxgvJEaiAQiRHhekUSeb98fKX3tyDs9OBOXPgKbpKkAMepfKWU9AvOgu9RdEbEAogUIV5DrY+S8FnwI45vAJBNYBW6billbwIGSXsz8KBPACfb0rPAPZ9IIWLpa11xvj0fPMC5jWcHHlU7e8/LTRpPBsywlwMb2suDV9pvA361+WzobA3ur11Q14f3K/e34CrQOv8UMJsZL8XqFuBVU0wUvGQ5LbkMmDEwrMEmljLGDEtrMBFdwrouOXN4PGNWaktLrvFsGHDMl9fbbssR2LFWZ3WTpim0bfbzhZ5TPpMzu/07PQEqVrkfJfxzOQAAAABJRU5ErkJggg=="
+            width="12px"
+          />
+        </div>
+      </div>
+      <div class="cards-box">
+        <div class="cards02 c01">
+          <h3>12 Best Luxury dining plac...</h3>
+          <h4>
+            12 places
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAOZJREFUSEvdl9ENwjAMBf02gU3oJnQTmASYhI7STQxGRIoQifJih0rkPz2f49gpZKOFjbhSBavqUUQWAGt0gEWwql5ExMAGvQE4RcJr4PvT9pDBFhGZo+wZsMUQZs+CUwLO3tT3gpO9pd6OgF4esCv1XnAytbOfmMKLAtP2kWDKfgS4yX4UONkXm85o8MsewP7zvv0t2Cbb9K27jDSuttUR4KYpFg1uHh5RYGuZ1MCIADdb5kXmAdOWEeArgJkewtkG1thl2WtcbAY95i3PW/tuVwHVAqqBd+/n7W8f9D3pY/Zs9u/0AKu8kB9QJ8GbAAAAAElFTkSuQmCC"
+              width="13px"
+            />
+          </h4>
+        </div>
+        <div class="cards02 c02">
+          <h3>11 Romantic dining places</h3>
+          <h4>
+            11 places
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAOZJREFUSEvdl9ENwjAMBf02gU3oJnQTmASYhI7STQxGRIoQifJih0rkPz2f49gpZKOFjbhSBavqUUQWAGt0gEWwql5ExMAGvQE4RcJr4PvT9pDBFhGZo+wZsMUQZs+CUwLO3tT3gpO9pd6OgF4esCv1XnAytbOfmMKLAtP2kWDKfgS4yX4UONkXm85o8MsewP7zvv0t2Cbb9K27jDSuttUR4KYpFg1uHh5RYGuZ1MCIADdb5kXmAdOWEeArgJkewtkG1thl2WtcbAY95i3PW/tuVwHVAqqBd+/n7W8f9D3pY/Zs9u/0AKu8kB9QJ8GbAAAAAElFTkSuQmCC"
+              width="13px"
+            />
+          </h4>
+        </div>
+        <div class="cards02 c03">
+          <h3>17 Great Cafes</h3>
+          <h4>
+            17 places
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAOZJREFUSEvdl9ENwjAMBf02gU3oJnQTmASYhI7STQxGRIoQifJih0rkPz2f49gpZKOFjbhSBavqUUQWAGt0gEWwql5ExMAGvQE4RcJr4PvT9pDBFhGZo+wZsMUQZs+CUwLO3tT3gpO9pd6OgF4esCv1XnAytbOfmMKLAtP2kWDKfgS4yX4UONkXm85o8MsewP7zvv0t2Cbb9K27jDSuttUR4KYpFg1uHh5RYGuZ1MCIADdb5kXmAdOWEeArgJkewtkG1thl2WtcbAY95i3PW/tuVwHVAqqBd+/n7W8f9D3pY/Zs9u/0AKu8kB9QJ8GbAAAAAElFTkSuQmCC"
+              width="13px"
+            />
+          </h4>
+        </div>
+        <div class="cards02 c04">
+          <h3>12 Local Favourite Places</h3>
+          <h4>
+            12 places
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAOZJREFUSEvdl9ENwjAMBf02gU3oJnQTmASYhI7STQxGRIoQifJih0rkPz2f49gpZKOFjbhSBavqUUQWAGt0gEWwql5ExMAGvQE4RcJr4PvT9pDBFhGZo+wZsMUQZs+CUwLO3tT3gpO9pd6OgF4esCv1XnAytbOfmMKLAtP2kWDKfgS4yX4UONkXm85o8MsewP7zvv0t2Cbb9K27jDSuttUR4KYpFg1uHh5RYGuZ1MCIADdb5kXmAdOWEeArgJkewtkG1thl2WtcbAY95i3PW/tuVwHVAqqBd+/n7W8f9D3pY/Zs9u/0AKu8kB9QJ8GbAAAAAElFTkSuQmCC"
+              width="13px"
+            />
+          </h4>
+        </div>
+      </div>
+      <div class="popular">
+        <p>Popular localities in and around Indore</p>
+      </div>
+    </div>
+    <div class="buttons">
+      <div class="btn">
+        <div>
+          <h5>Vijay nagar</h5>
+          <br />
+          <span>1291 places</span>
+        </div>
+        <img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAOtJREFUSEvt00EKgkAUBuD/TXqDoH2b7lBg53DjuJCItkE3iVaiJB0kiM4Q1AGioANoaUxQiBDzxhBa6Pr5vvf+mSE0/FHD/dEC2oT/JyIp5YKI1nEcn7VjlwpYG/ieNwPREsARRI4JwgKCIOjds2wPoF8AJyHEMIqiK2cTFqAalREABxLC4SBs4IOk6RZEAy5iBChk4rrd1LZ3b6RjWaMwDG/f4voZ0EVlBFSn1zVXW7GB1yEb5s8G6t4gNuD7/hRFsVI355Hn4yRJLpw3wAZUoZRyTkQbk1dsBHAnrtaxD7kF6iag/a/xM3gCeYxeGWvC8u8AAAAASUVORK5CYII="
+        />
+      </div>
+      <div class="btn">
+        <div>
+          <h5>Vijay nagar</h5>
+          <br />
+          <span>1291 places</span>
+        </div>
+        <img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAOtJREFUSEvt00EKgkAUBuD/TXqDoH2b7lBg53DjuJCItkE3iVaiJB0kiM4Q1AGioANoaUxQiBDzxhBa6Pr5vvf+mSE0/FHD/dEC2oT/JyIp5YKI1nEcn7VjlwpYG/ieNwPREsARRI4JwgKCIOjds2wPoF8AJyHEMIqiK2cTFqAalREABxLC4SBs4IOk6RZEAy5iBChk4rrd1LZ3b6RjWaMwDG/f4voZ0EVlBFSn1zVXW7GB1yEb5s8G6t4gNuD7/hRFsVI355Hn4yRJLpw3wAZUoZRyTkQbk1dsBHAnrtaxD7kF6iag/a/xM3gCeYxeGWvC8u8AAAAASUVORK5CYII="
+        />
+      </div>
+      <div class="btn">
+        <div>
+          <h5>Vijay nagar</h5>
+          <br />
+          <span>1291 places</span>
+        </div>
+        <img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAOtJREFUSEvt00EKgkAUBuD/TXqDoH2b7lBg53DjuJCItkE3iVaiJB0kiM4Q1AGioANoaUxQiBDzxhBa6Pr5vvf+mSE0/FHD/dEC2oT/JyIp5YKI1nEcn7VjlwpYG/ieNwPREsARRI4JwgKCIOjds2wPoF8AJyHEMIqiK2cTFqAalREABxLC4SBs4IOk6RZEAy5iBChk4rrd1LZ3b6RjWaMwDG/f4voZ0EVlBFSn1zVXW7GB1yEb5s8G6t4gNuD7/hRFsVI355Hn4yRJLpw3wAZUoZRyTkQbk1dsBHAnrtaxD7kF6iag/a/xM3gCeYxeGWvC8u8AAAAASUVORK5CYII="
+        />
+      </div>
+      <div class="btn">
+        <div>
+          <h5>Vijay nagar</h5>
+          <br />
+          <span>1291 places</span>
+        </div>
+        <img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAOtJREFUSEvt00EKgkAUBuD/TXqDoH2b7lBg53DjuJCItkE3iVaiJB0kiM4Q1AGioANoaUxQiBDzxhBa6Pr5vvf+mSE0/FHD/dEC2oT/JyIp5YKI1nEcn7VjlwpYG/ieNwPREsARRI4JwgKCIOjds2wPoF8AJyHEMIqiK2cTFqAalREABxLC4SBs4IOk6RZEAy5iBChk4rrd1LZ3b6RjWaMwDG/f4voZ0EVlBFSn1zVXW7GB1yEb5s8G6t4gNuD7/hRFsVI355Hn4yRJLpw3wAZUoZRyTkQbk1dsBHAnrtaxD7kF6iag/a/xM3gCeYxeGWvC8u8AAAAASUVORK5CYII="
+        />
+      </div>
+      <div class="btn">
+        <div>
+          <h5>Vijay nagar</h5>
+          <br />
+          <span>1291 places</span>
+        </div>
+        <img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAOtJREFUSEvt00EKgkAUBuD/TXqDoH2b7lBg53DjuJCItkE3iVaiJB0kiM4Q1AGioANoaUxQiBDzxhBa6Pr5vvf+mSE0/FHD/dEC2oT/JyIp5YKI1nEcn7VjlwpYG/ieNwPREsARRI4JwgKCIOjds2wPoF8AJyHEMIqiK2cTFqAalREABxLC4SBs4IOk6RZEAy5iBChk4rrd1LZ3b6RjWaMwDG/f4voZ0EVlBFSn1zVXW7GB1yEb5s8G6t4gNuD7/hRFsVI355Hn4yRJLpw3wAZUoZRyTkQbk1dsBHAnrtaxD7kF6iag/a/xM3gCeYxeGWvC8u8AAAAASUVORK5CYII="
+        />
+      </div>
+      <div class="btn">
+        <div>
+          <h5>Vijay nagar</h5>
+          <br />
+          <span>1291 places</span>
+        </div>
+        <img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAOtJREFUSEvt00EKgkAUBuD/TXqDoH2b7lBg53DjuJCItkE3iVaiJB0kiM4Q1AGioANoaUxQiBDzxhBa6Pr5vvf+mSE0/FHD/dEC2oT/JyIp5YKI1nEcn7VjlwpYG/ieNwPREsARRI4JwgKCIOjds2wPoF8AJyHEMIqiK2cTFqAalREABxLC4SBs4IOk6RZEAy5iBChk4rrd1LZ3b6RjWaMwDG/f4voZ0EVlBFSn1zVXW7GB1yEb5s8G6t4gNuD7/hRFsVI355Hn4yRJLpw3wAZUoZRyTkQbk1dsBHAnrtaxD7kF6iag/a/xM3gCeYxeGWvC8u8AAAAASUVORK5CYII="
+        />
+      </div>
+      <div class="btn">
+        <div>
+          <h5>Vijay nagar</h5>
+          <br />
+          <span>1291 places</span>
+        </div>
+        <img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAOtJREFUSEvt00EKgkAUBuD/TXqDoH2b7lBg53DjuJCItkE3iVaiJB0kiM4Q1AGioANoaUxQiBDzxhBa6Pr5vvf+mSE0/FHD/dEC2oT/JyIp5YKI1nEcn7VjlwpYG/ieNwPREsARRI4JwgKCIOjds2wPoF8AJyHEMIqiK2cTFqAalREABxLC4SBs4IOk6RZEAy5iBChk4rrd1LZ3b6RjWaMwDG/f4voZ0EVlBFSn1zVXW7GB1yEb5s8G6t4gNuD7/hRFsVI355Hn4yRJLpw3wAZUoZRyTkQbk1dsBHAnrtaxD7kF6iag/a/xM3gCeYxeGWvC8u8AAAAASUVORK5CYII="
+        />
+      </div>
+      <div class="btn">
+        <div>
+          <h5>Vijay nagar</h5>
+          <br />
+          <span>1291 places</span>
+        </div>
+        <img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAOtJREFUSEvt00EKgkAUBuD/TXqDoH2b7lBg53DjuJCItkE3iVaiJB0kiM4Q1AGioANoaUxQiBDzxhBa6Pr5vvf+mSE0/FHD/dEC2oT/JyIp5YKI1nEcn7VjlwpYG/ieNwPREsARRI4JwgKCIOjds2wPoF8AJyHEMIqiK2cTFqAalREABxLC4SBs4IOk6RZEAy5iBChk4rrd1LZ3b6RjWaMwDG/f4voZ0EVlBFSn1zVXW7GB1yEb5s8G6t4gNuD7/hRFsVI355Hn4yRJLpw3wAZUoZRyTkQbk1dsBHAnrtaxD7kF6iag/a/xM3gCeYxeGWvC8u8AAAAASUVORK5CYII="
+        />
+      </div>
+      <div class="btn">
+        <div>
+          <h5>Vijay nagar</h5>
+          <br />
+          <span>1291 places</span>
+        </div>
+        <img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAOtJREFUSEvt00EKgkAUBuD/TXqDoH2b7lBg53DjuJCItkE3iVaiJB0kiM4Q1AGioANoaUxQiBDzxhBa6Pr5vvf+mSE0/FHD/dEC2oT/JyIp5YKI1nEcn7VjlwpYG/ieNwPREsARRI4JwgKCIOjds2wPoF8AJyHEMIqiK2cTFqAalREABxLC4SBs4IOk6RZEAy5iBChk4rrd1LZ3b6RjWaMwDG/f4voZ0EVlBFSn1zVXW7GB1yEb5s8G6t4gNuD7/hRFsVI355Hn4yRJLpw3wAZUoZRyTkQbk1dsBHAnrtaxD7kF6iag/a/xM3gCeYxeGWvC8u8AAAAASUVORK5CYII="
+        />
+      </div>
+    </div>
+    <div class="mobile">
+      <div class="mb-box">
+        <div class="mb-img">
+          <img
+            src="https://b.zmtcdn.com/data/o2_assets/f773629053b24263e69f601925790f301680693809.png"
+            alt=""
+            height="260px"
+          />
+        </div>
+        <div class="detail">
+          <h2>Get the Zomato app</h2>
+          <p id="send">
+            We will send you a link, open it on your phone to download the app
+          </p>
+          <div class="radio">
+            <label for="Email">Email</label>
+            <input type="radio" name="contact" id="Email" />
+            <label for="phone">Phone</label>
+            <input type="radio" name="contact" id="phone" />
+          </div>
+          <div class="share-app">
+            <input type="text" placeholder="Email" class="email-input"/>
+            <button class="share-btn">Share app link</button>
+          </div>
+          <h5 class="downlod">Download app from</h5>
+          <div class="download-btn">
+            <img
+              src="https://b.zmtcdn.com/data/webuikit/23e930757c3df49840c482a8638bf5c31556001144.png"
+              alt="" height="35px"
+            />
+            <img
+              src="https://b.zmtcdn.com/data/webuikit/9f0c85a5e33adb783fa0aef667075f9e1556003622.png"
+              alt="" height="35px"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="explore">
+        <h3>Explore options near me</h3>
+        <div class="ex-box">
+            <h5>Popular cuisines near me</h5>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAORJREFUSEvtktENgjAQhu8msW7iKLIDDX3Ut0rZQTfBTWQQSLXGJoRA74ooJpZXLvf1/+5HWOnDlbiQwF8zn1Qn1R8z8NvlUkoJrXXDia/yfKer6krNkondIotYI+JRl+UhtLCQ8gwAewTItDGX0CwJLqS8AYBwS0JwD33BmpMx27fATrPtujoEH0LR2ozSTSZ2rw7B50Cf9qgS+P9jcGvtxt3U6+Uk9fvY4LHkvUc3MdCoxFPJH4mjobPAg+QQm3SW6n4f3M2hbQXV3qkORd2YW0TOXAJzLC0yk1QvopGz5P9U3wH79XIfyxISLwAAAABJRU5ErkJggg==" height="25px"/>
+        </div>
+        <div class="ex-box">
+            <h5>Popular restaurant types near me</h5>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAORJREFUSEvtktENgjAQhu8msW7iKLIDDX3Ut0rZQTfBTWQQSLXGJoRA74ooJpZXLvf1/+5HWOnDlbiQwF8zn1Qn1R8z8NvlUkoJrXXDia/yfKer6krNkondIotYI+JRl+UhtLCQ8gwAewTItDGX0CwJLqS8AYBwS0JwD33BmpMx27fATrPtujoEH0LR2ozSTSZ2rw7B50Cf9qgS+P9jcGvtxt3U6+Uk9fvY4LHkvUc3MdCoxFPJH4mjobPAg+QQm3SW6n4f3M2hbQXV3qkORd2YW0TOXAJzLC0yk1QvopGz5P9U3wH79XIfyxISLwAAAABJRU5ErkJggg==" height="25px"/>
+        </div>
+        <div class="ex-box">
+            <h5>Top Restaurant Chains</h5>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAORJREFUSEvtktENgjAQhu8msW7iKLIDDX3Ut0rZQTfBTWQQSLXGJoRA74ooJpZXLvf1/+5HWOnDlbiQwF8zn1Qn1R8z8NvlUkoJrXXDia/yfKer6krNkondIotYI+JRl+UhtLCQ8gwAewTItDGX0CwJLqS8AYBwS0JwD33BmpMx27fATrPtujoEH0LR2ozSTSZ2rw7B50Cf9qgS+P9jcGvtxt3U6+Uk9fvY4LHkvUc3MdCoxFPJH4mjobPAg+QQm3SW6n4f3M2hbQXV3qkORd2YW0TOXAJzLC0yk1QvopGz5P9U3wH79XIfyxISLwAAAABJRU5ErkJggg==" height="25px"/>
+        </div>
+        <div class="ex-box">
+            <h5>Cities We Deliver To</h5>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAORJREFUSEvtktENgjAQhu8msW7iKLIDDX3Ut0rZQTfBTWQQSLXGJoRA74ooJpZXLvf1/+5HWOnDlbiQwF8zn1Qn1R8z8NvlUkoJrXXDia/yfKer6krNkondIotYI+JRl+UhtLCQ8gwAewTItDGX0CwJLqS8AYBwS0JwD33BmpMx27fATrPtujoEH0LR2ozSTSZ2rw7B50Cf9qgS+P9jcGvtxt3U6+Uk9fvY4LHkvUc3MdCoxFPJH4mjobPAg+QQm3SW6n4f3M2hbQXV3qkORd2YW0TOXAJzLC0yk1QvopGz5P9U3wH79XIfyxISLwAAAABJRU5ErkJggg==" height="25px"/>
+        </div>
+        
+    </div>
+    <section class="section 6">
+      <div class="footer">
+          <div class="contnr">
+              <div class="footer-top">
+                  <img src="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png?fit=around|198:42&crop=198:42;*,*"/>
+                  <div class="footer-btn">
+                      <button>India</button>
+                      <button>English</button>
+
+                  </div>
+              </div>
+              <div class="footer-link">
+                  <div class="clm">
+                      <div>About Zomato</div>
+                      <ul class="col-link">
+                       <li><a href="">Who We Are</a></li>
+                       <li><a href="">blog</a></li>
+                       <li><a href="">work with us</a></li>
+                       <li><a href="">Investor relation</a></li>
+                       <li><a href="">report fraud</a></li>
+                       <li><a href="">press kit</a></li>
+                       <li><a href="">contact us</a></li>
+                       
+                      </ul> 
+                                      </div>
+                                     <div class="clm">
+                       <div>Zomaverse</div>
+                               <ul class="col-link">
+                              <li><a href="">zomato</a></li>
+                             <li><a href="">blinkit</a></li>
+                            <li><a href="">feeding india</a></li>
+                            <li><a href="">hyperpure</a></li>
+                           <li><a href="">zomato live</a></li>
+                           <li><a href="">zomaland</a></li>
+                           <li><a href="">weather union</a></li>
+                                           
+                            </ul> 
+                           </div>
+                          <div class="clm">
+                          <div>For Restaurants</div>
+                          <ul class="col-link">
+                           <li><a href="">partner with us</a></li>
+                          <li><a href="">apps for you</a></li>
+                         </ul> 
+                    </div>
+                     <div class="clm">
+                    <div>Learn More</div>
+                     <ul class="col-link">
+                      <li><a href="">privacy</a></li>
+                       <li><a href="">security</a></li>
+                       <li><a href="">terms</a></li>
+                        <li><a href="">sitemap</a></li>
+                         </ul> 
+                         </div>
+                           <div class="clm">
+                         <div>Social Links</div>
+                          <ul class="col-link">
+                                <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                                <a href=""><i class="fa-brands fa-youtube"></i></a>
+                                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                                <li><img src="https://b.zmtcdn.com/data/webuikit/9f0c85a5e33adb783fa0aef667075f9e1556003622.png"/></li>
+                                <li><img src="https://b.zmtcdn.com/data/webuikit/23e930757c3df49840c482a8638bf5c31556001144.png"/>
+                                </li>
+                          </ul>                                                              
+                          </div>
+                     </div>
+                     <hr>
+                     <div class="footer-bottom">
+                      <p>By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. All trademarks are properties of their respective owners. 2008-2024 © Zomato™ Ltd. All rights reserved.</p>
+                     </div>
+          </div>
+      </div>
+     </section>
+  </body>
+</html>
